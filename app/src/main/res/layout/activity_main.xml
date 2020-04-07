@@ -9,9 +9,12 @@
 
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
+        <!--전체 영화 정보 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,14 +24,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                >
+                android:background="@color/colorAccent">
+
+                <!--영화 정보 포스터 배경 -->
                 <LinearLayout
                     android:id="@+id/top_movie_info"
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
                     android:background="@drawable/top_bg_drawable">
 
+                    <!--영화 포스터 -->
                     <ImageView
                         android:id="@+id/movie_poster"
                         android:layout_width="wrap_content"
@@ -38,12 +43,15 @@
                         android:layout_marginRight="20dp"
                         android:contentDescription="movie_poster"
                         app:srcCompat="@drawable/image11" />
+                    <!--영화 포스터 -->
 
+                    <!--영화 정보1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
+                        <!--제목 -->
                         <LinearLayout
                             android:id="@+id/top_title_bar"
                             android:layout_width="match_parent"
@@ -70,7 +78,9 @@
                                 android:padding="4dp"
                                 app:srcCompat="@drawable/ic_15" />
                         </LinearLayout>
+                        <!--제목 -->
 
+                        <!--개봉일-->
                         <TextView
                             android:id="@+id/movie_open_date"
                             android:layout_width="match_parent"
@@ -80,7 +90,9 @@
                             android:text="2014.07.23 개봉"
                             android:textColor="#FFFFFF"
                             android:textSize="16dp" />
+                        <!--개봉일-->
 
+                        <!--영화 장르 시간-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -95,16 +107,10 @@
                                 android:textColor="#FFFFFF"
                                 android:textSize="16dp" />
 
-                            <TextView
-                                android:id="@+id/movie_runningTime"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:padding="4dp"
-                                android:text="137분"
-                                android:textColor="#FFFFFF"
-                                android:textSize="16dp" />
                         </LinearLayout>
+                        <!--영화 장르 시간-->
 
+                        <!--좋아요 싫어요 버튼-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -119,21 +125,22 @@
                                 android:orientation="horizontal">
 
                                 <Button
-                                    android:id="@+id/button_like"
+                                    android:id="@+id/likeButton"
                                     android:layout_width="24dp"
                                     android:layout_height="24dp"
-                                    android:background="@drawable/like_icon"
+                                    android:background="@drawable/thumb_up_selector"
                                     android:padding="4dp" />
 
                                 <TextView
-                                    android:id="@+id/like_count"
+                                    android:id="@+id/likeCountView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:padding="4dp"
-                                    android:text="15"
+                                    android:text="0"
                                     android:textColor="#FFFFFF"
                                     android:textSize="16dp"
                                     android:textStyle="bold" />
+
                             </LinearLayout>
 
                             <LinearLayout
@@ -144,37 +151,42 @@
                                 android:orientation="horizontal">
 
                                 <Button
-                                    android:id="@+id/button_dislike"
+                                    android:id="@+id/dislikeButton"
                                     android:layout_width="24dp"
                                     android:layout_height="24dp"
-                                    android:background="@drawable/dislike_icon"
+                                    android:background="@drawable/thumb_down_selector"
                                     android:padding="4dp" />
 
                                 <TextView
-                                    android:id="@+id/dislike_count"
+                                    android:id="@+id/dislikeCountView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:padding="4dp"
-                                    android:text="15"
+                                    android:text="0"
                                     android:textColor="#FFFFFF"
                                     android:textSize="16dp"
                                     android:textStyle="bold" />
                             </LinearLayout>
 
                         </LinearLayout>
+                        <!--좋아요 싫어요 버튼-->
 
                     </LinearLayout>
+                    <!--영화 정보1 -->
+
                 </LinearLayout>
+                <!--영화 정보 포스터 배경 -->
 
             </LinearLayout>
+            <!-- 영화 정보 포스터 -->
 
             <!-- 영화 예매 정보 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#f2f2f2"
-                >
+                android:background="#f2f2f2">
+
                 <LinearLayout
                     android:id="@+id/top_movie_info2"
                     android:layout_width="match_parent"
@@ -361,25 +373,26 @@
                 android:layout_height="300dp"
                 android:background="#E2E2E2"
                 android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                >
+                android:paddingBottom="20dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:background="#ffffff"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="줄거리"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:padding="4dp"/>
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="줄거리"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
                         android:text="군도, 백성을 구하라!
  양반과 탐관오리들의 착취가 극에 달했던 조선 철종 13년. 힘 없는 백성의 편이 되어
  세상을 바로잡고자 하는 의적떼인 군도(群盜), 지리산 추설이 있었다.
@@ -391,176 +404,177 @@
 
  뭉치면 백성, 흩어지면 도적!
  망할 세상을 뒤집기 위해, 백성이 주인인 새 세상을 향해 도치를 필두로 한 군도는 백성의 적,
- 조윤과 한 판 승부를 시작하는데..."
-                        android:padding="4dp"
-                        />
+ 조윤과 한 판 승부를 시작하는데..." />
 
                 </LinearLayout>
 
             </LinearLayout>
-
+            <!--영화 줄거리 -->
 
             <!-- 감독 배우  -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="10dp"
                     android:text="감독 윤종빈"
                     android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:paddingTop="4dp"
-                    android:paddingLeft="4dp"
-                    android:paddingBottom="10dp"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="10dp"
                     android:text="출연 하정우(도치), 강동원(조윤)"
                     android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:paddingTop="4dp"
-                    android:paddingLeft="4dp"
-                    android:paddingBottom="10dp"
-                    />
+                    android:textStyle="bold" />
 
             </LinearLayout>
+            <!-- 감독 배우 -->
+
             <!-- 한줄평  -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#E2E2E2"
-                android:paddingBottom="20dp"
-                android:paddingTop="20dp"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
+                <!--  한줄평 Top-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="한줄평"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <!--작성하기 버튼-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_review_selected" />
+
+                        <TextView
+                            android:id="@+id/listViewButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="작성하기"
+                            android:textColor="#FF9100"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <!--작성하기 버튼-->
+
+                </LinearLayout>
+                <!--한줄평 TOP -->
+
+
+                <!--//작성된 한줄평 리스트 뷰-->
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"></ListView>
+
+            </LinearLayout>
+            <!--한줄평 끝 -->
+
+            <!-- 모아보기 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9C27B0"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/viewAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:text="모두 보기"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <!-- 모아보기 -->
+
+            <!--예매 버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- sns 예매하기  -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#ffffff"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="horizontal">
 
-                    <!--  한줄평 Top-->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-                        <TextView
+                        android:padding="10dp">
+
+                        <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="한줄평"
-                            android:layout_weight="1"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            android:padding="4dp"
-                            />
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:src="@drawable/ic_facebook" />
 
-                        <LinearLayout
+                        <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:padding="4dp">
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/ic_review_selected" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="작성하기"
-                                android:textStyle="bold"
-                                android:textSize="18dp"
-                                android:textColor="#FF9100"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        >
-
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:src="@drawable/ic_kakao" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#9C27B0"
-                        android:orientation="horizontal"
-                        android:padding="2dp">
+                        android:padding="10dp">
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="모두 보기"
-                            android:textSize="18dp"
-                            android:background="#ffffff"
-                            />
+                            android:layout_height="match_parent"
+                            android:background="#F44336"
+                            android:text="예매하기"
+                            android:textColor="#ffffff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
                     </LinearLayout>
 
                 </LinearLayout>
+                <!--SNS 예매하기-->
 
             </LinearLayout>
-
-
-            <!-- sns 예매하기  -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:orientation="horizontal"
-                >
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    >
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_facebook"
-                        android:paddingLeft="4dp"
-                        android:paddingRight="4dp"
-                        />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_kakao"
-                        android:paddingLeft="4dp"
-                        android:paddingRight="4dp"
-                        />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp"
-                    >
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="예매하기"
-                        android:background="#F44336"
-                        android:textSize="20dp"
-                        android:textColor="#ffffff"
-                        android:textStyle="bold"
-                        />
-
-                </LinearLayout>
-
-            </LinearLayout>
+            <!--예매버튼 종료-->
 
         </LinearLayout>
+        <!--전체 영화 정보 -->
 
     </ScrollView>
 

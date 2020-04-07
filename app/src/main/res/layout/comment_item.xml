@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+        <!--한줄평 전체 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <!-- 유저 아이콘-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/commentUserId"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/user1"
+                app:civ_border_color="#FFCCCCCC"
+                app:civ_border_width="2dp" />
+            <!--유저 아이콘-->
+
+            <!--한줄평 정보 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--유저아이디 -->
+                <TextView
+                    android:id="@+id/commentUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="유저아이디"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <!--등록시간 평점-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/commentTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="등록 시간 "
+                        android:textColor="#CBC1C1"
+                        android:textSize="10dp" />
+
+                    <RatingBar
+                        android:id="@+id/commentRatingBar"
+                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:rating="5" />
+                </LinearLayout>
+
+                <!--한줄평 내용 -->
+                <TextView
+                    android:id="@+id/commentText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="한줄평 내용"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <!--추천 신고-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/commentRecommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="추천 "
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/commentCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="0"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/commentReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="신고하기"
+                        android:textColor="#CBC1C1"
+                        android:textSize="10dp" />
+                </LinearLayout>
+                <!--추천 신고-->
+
+            </LinearLayout>
+            <!--한줄평 정보 -->
+
+        </LinearLayout>
+        <!--한줄평 전체 -->
+
+        <!--줄 구분-->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CBC1C1" />
+
+</LinearLayout>
